@@ -8,4 +8,8 @@
             android:id="@+id/drawerMenuItemSecondScreen"
             android:title="Second Screen"
             />
+    <item
+            android:id="@+id/drawerMenuItemCompositeDisposable"
+            android:title="CD"
+            />
 </menu>

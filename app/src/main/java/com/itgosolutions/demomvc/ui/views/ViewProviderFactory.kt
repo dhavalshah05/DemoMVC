@@ -2,6 +2,8 @@ package com.itgosolutions.demomvc.ui.views
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.itgosolutions.demomvc.ui.compositedisposable.CompositeDisposableView
+import com.itgosolutions.demomvc.ui.compositedisposable.CompositeDisposableViewImpl
 import com.itgosolutions.demomvc.ui.firstscreen.FirstScreenView
 import com.itgosolutions.demomvc.ui.firstscreen.FirstScreenViewImpl
 import com.itgosolutions.demomvc.ui.home.HomeView
@@ -27,5 +29,9 @@ class ViewProviderFactory(private val layoutInflater: LayoutInflater) {
 
     fun newSecondScreenView(parent: ViewGroup?): SecondScreenView {
         return SecondScreenViewImpl(layoutInflater, parent)
+    }
+
+    fun newCompositeDisposableView(parent: ViewGroup?): CompositeDisposableView {
+        return CompositeDisposableViewImpl(layoutInflater, parent)
     }
 }

@@ -47,6 +47,8 @@ class HomeViewImpl(
                 onDrawerItemClicked(DrawerItem.FIRST_SCREEN)
             } else if (item.itemId == R.id.drawerMenuItemSecondScreen) {
                 onDrawerItemClicked(DrawerItem.SECOND_SCREEN)
+            } else if(item.itemId == R.id.drawerMenuItemCompositeDisposable) {
+                onDrawerItemClicked(DrawerItem.COMPOSITE_DISPOSABLE)
             }
 
             false
@@ -60,6 +62,9 @@ class HomeViewImpl(
             }
             DrawerItem.SECOND_SCREEN -> {
                 getListeners().forEach { listener -> listener.onSecondScreenClicked() }
+            }
+            DrawerItem.COMPOSITE_DISPOSABLE -> {
+                getListeners().forEach { listener -> listener.onCompositeDisposableClicked() }
             }
         }
     }

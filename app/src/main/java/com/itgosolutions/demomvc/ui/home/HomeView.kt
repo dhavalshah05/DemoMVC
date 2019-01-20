@@ -8,6 +8,7 @@ interface HomeView : ObservableBaseView<HomeView.Listener> {
     interface Listener {
         fun onFirstScreenClicked()
         fun onSecondScreenClicked()
+        fun onCompositeDisposableClicked()
     }
 
     @IdRes

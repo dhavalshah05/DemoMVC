@@ -3,6 +3,7 @@ package com.itgosolutions.demomvc
 import android.os.Bundle
 import com.itgosolutions.demomvc.ui.common.BaseActivity
 import com.itgosolutions.demomvc.ui.common.ScreenTitleHelper
+import com.itgosolutions.demomvc.ui.compositedisposable.CompositeDisposableFragment
 import com.itgosolutions.demomvc.ui.firstscreen.FirstScreenFragment
 import com.itgosolutions.demomvc.ui.home.HomeView
 import com.itgosolutions.demomvc.ui.secondscreen.SecondScreenFragment
@@ -40,6 +41,11 @@ class HomeActivity : BaseActivity(), HomeView.Listener, ScreenTitleHelper {
 
     override fun onSecondScreenClicked() {
         supportFragmentManager.beginTransaction().replace(homeView.getFrameContentId(), SecondScreenFragment())
+            .commit()
+    }
+
+    override fun onCompositeDisposableClicked() {
+        supportFragmentManager.beginTransaction().replace(homeView.getFrameContentId(), CompositeDisposableFragment())
             .commit()
     }
 
