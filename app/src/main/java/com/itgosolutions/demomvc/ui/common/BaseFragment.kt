@@ -15,7 +15,7 @@ abstract class BaseFragment : Fragment() {
         }
         isControllerComponentUsed = true
         return (requireActivity().application as DemoMvcApplication).getApplicationComponent()
-            .newControllerComponent(ControllerModule(requireActivity() as BaseActivity))
+            .newControllerComponent(ControllerModule(requireActivity()))
     }
 
 }

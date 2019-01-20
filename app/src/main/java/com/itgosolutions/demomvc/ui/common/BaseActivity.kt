@@ -1,6 +1,5 @@
 package com.itgosolutions.demomvc.ui.common
 
-import android.support.annotation.StringRes
 import android.support.v7.app.AppCompatActivity
 import com.itgosolutions.demomvc.DemoMvcApplication
 import com.itgosolutions.demomvc.di.controller.ControllerComponent
@@ -19,6 +18,4 @@ abstract class BaseActivity : AppCompatActivity() {
             .newControllerComponent(ControllerModule(this))
     }
 
-    open fun setScreenTitle(title: String) {}
-    open fun setScreenTitle(@StringRes id: Int) {}
 }

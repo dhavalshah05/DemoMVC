@@ -2,13 +2,14 @@ package com.itgosolutions.demomvc
 
 import android.os.Bundle
 import com.itgosolutions.demomvc.ui.common.BaseActivity
+import com.itgosolutions.demomvc.ui.common.ScreenTitleHelper
 import com.itgosolutions.demomvc.ui.firstscreen.FirstScreenFragment
 import com.itgosolutions.demomvc.ui.home.HomeView
 import com.itgosolutions.demomvc.ui.secondscreen.SecondScreenFragment
 import com.itgosolutions.demomvc.ui.views.ViewProviderFactory
 import javax.inject.Inject
 
-class HomeActivity : BaseActivity(), HomeView.Listener {
+class HomeActivity : BaseActivity(), HomeView.Listener, ScreenTitleHelper {
 
     @Inject
     lateinit var viewProviderFactory: ViewProviderFactory
@@ -44,10 +45,6 @@ class HomeActivity : BaseActivity(), HomeView.Listener {
 
     override fun setScreenTitle(title: String) {
         homeView.setScreenTitle(title)
-    }
-
-    override fun setScreenTitle(id: Int) {
-        homeView.setScreenTitle(getString(id))
     }
 
     override fun onBackPressed() {
